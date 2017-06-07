@@ -19,7 +19,7 @@
         <dependency>
             <groupId>com.github.strikerx3</groupId>
             <artifactId>jxinput</artifactId>
-            <version>bb39935</version>
+            <version>ca55984</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
