@@ -3,6 +3,8 @@ package org.cyanotic.cx10.utils;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.File;
+import java.io.FileInputStream;
 
 /**
  * Created by cyanotic on 19/11/2016.
@@ -36,9 +38,11 @@ public class ByteUtils {
     }
 
     public static byte[] loadMessageFromFile(String fileName) throws IOException {
-        InputStream resourceAsStream = ByteUtils.class.getResourceAsStream("/" + fileName);
+    	//System.out.println(System.getProperty("user.dir"));
+    	File inFile = new File("src\\resources\\" + fileName);
+        InputStream resourceAsStream = new FileInputStream(inFile);
         ByteArrayOutputStream buffer = new ByteArrayOutputStream();
-
+        
         int nRead;
         byte[] data = new byte[4096];
 
@@ -48,6 +52,7 @@ public class ByteUtils {
 
         buffer.flush();
 
+        resourceAsStream.close();
         return buffer.toByteArray();
 
     }
