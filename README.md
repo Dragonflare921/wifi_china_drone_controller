@@ -1,3 +1,8 @@
+This is a fork of Otacon's CX10-WD drone control software [here](https://github.com/Otacon/wifi_china_drone_controller)
+
+The plan is to fix errors then port this project to a different language
+
+
 # README #
 
 This is a sample application to control Cheerson CX10-WD drone from desktop using keyboard or a XInput Device (i.e. XBoxController)
