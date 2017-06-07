@@ -1,11 +1,10 @@
 package org.cyanotic.cx10.io.controls;
 
-import org.cyanotic.cx10.model.Command;
-
 import com.ivan.xinput.XInputAxes;
 import com.ivan.xinput.XInputComponents;
 import com.ivan.xinput.XInputDevice;
 import com.ivan.xinput.exceptions.XInputNotLoadedException;
+import org.cyanotic.cx10.model.Command;
 
 /**
  * Created by cyanotic on 19/11/2016.

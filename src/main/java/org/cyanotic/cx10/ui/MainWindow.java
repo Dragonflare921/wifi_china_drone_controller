@@ -16,16 +16,16 @@ import java.io.IOException;
 public class MainWindow extends JFrame implements ActionListener {
     private final CX10 cx10;
 
-    private JButton btnConnect = new JButton("Connect");
-    private JButton btnControls = new JButton("Controls");
-    private JButton btnVideo = new JButton("Video");
-    private JButton btnRecord = new JButton("Record");
-    private JLabel lblStatus = new JLabel();
-    private JPanel panel = new JPanel();
-    private JRadioButton radioController = new JRadioButton("Controller");
-    private JRadioButton radioKeyboard = new JRadioButton("Keyboard");
-    private JRadioButton radioWindows = new JRadioButton("Windows");
-    private JRadioButton radioLinux = new JRadioButton("Linux");
+    private JButton btnConnect;
+    private JButton btnControls;
+    private JButton btnVideo;
+    private JButton btnRecord;
+    private JLabel lblStatus;
+    private JPanel panel;
+    private JRadioButton radioController;
+    private JRadioButton radioKeyboard;
+    private JRadioButton radioWindows;
+    private JRadioButton radioLinux;
 
     private boolean isConnected = false;
     private boolean isRecording = false;
@@ -44,17 +44,6 @@ public class MainWindow extends JFrame implements ActionListener {
         btnVideo.addActionListener(this);
         btnRecord.addActionListener(this);
 
-        panel.add(btnConnect);
-        panel.add(btnControls);
-        panel.add(btnRecord);
-        panel.add(btnVideo);
-        
-        panel.add(lblStatus);
-        panel.add(radioController);
-        panel.add(radioKeyboard);
-        panel.add(radioLinux);
-        panel.add(radioWindows);
-        
         add(panel);
         pack();
         setTitle("CX-10WD Controller");
