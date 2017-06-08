@@ -40,28 +40,28 @@ public class Keyboard implements IController, KeyEventDispatcher {
         boolean newInput = true;
         switch (e.getKeyCode()) {
             case VK_W:
-                command.setThrottle(value);
+            	command.setPitch(value);                
                 break;
             case VK_S:
-                command.setThrottle(-value);
+            	command.setPitch(-value);                
                 break;
             case VK_D:
-                command.setYaw(value);
+            	command.setRoll(value);
                 break;
             case VK_A:
-                command.setYaw(-value);
+            	command.setRoll(-value);                
                 break;
             case VK_I:
-                command.setPitch(value);
+            	command.setThrottle(value);
                 break;
             case VK_K:
-                command.setPitch(-value);
+            	command.setThrottle(-value);
                 break;
             case VK_L:
-                command.setRoll(value);
+            	command.setYaw(value);                
                 break;
             case VK_J:
-                command.setRoll(-value);
+            	command.setYaw(-value);
                 break;
             case VK_UP:
                 command.setTakeOff(isPressed);

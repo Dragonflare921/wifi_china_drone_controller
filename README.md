@@ -31,5 +31,5 @@ or on MacOSX/Linux
 
 * Up arrow = Take Off
 * Down arrow = Land
-* W, A, S, D = Left stick
-* I, J, K, L = Right stick
+* W, A, S, D = forward, backward, strafe
+* I, J, K, L = altitude, yaw (turning)
