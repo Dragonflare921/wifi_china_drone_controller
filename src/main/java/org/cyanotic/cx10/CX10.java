@@ -173,7 +173,7 @@ public class CX10 {
                             ffmpegOutput.write(data);
                         }
 
-                        if (ffplayOutput == null && ffmpegOutput == null) {
+                        if (ffplayOutput == null || ffmpegOutput == null) {
                             decoder.disconnect();
                             break;
                         }
@@ -182,7 +182,8 @@ public class CX10 {
                         break;
                     }
                 } while (data != null);
-                decoder = null;
+                // Why is this a thing. There is no need.
+                //decoder = null;
             }
         });
         t.start();

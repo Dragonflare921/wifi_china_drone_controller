@@ -55,6 +55,9 @@ public class MainWindow extends JFrame implements ActionListener {
         panel.add(radioLinux);
         panel.add(radioWindows);
         
+        radioKeyboard.setSelected(true);
+        radioWindows.setSelected(true);
+        
         add(panel);
         pack();
         setTitle("CX-10WD Controller");
@@ -93,8 +96,12 @@ public class MainWindow extends JFrame implements ActionListener {
 
                 cx10.connect();
                 isConnected = true;
+                
+                cx10.startVideoStream((radioWindows.isSelected())?"win":"lin");
+                isPlaying = true;
+                model.setBtnVideoText("Stop Video");
+                model.setBtnVideoEnabled(true);
 
-                model = getModel();
                 model.setBtnConnectEnabled(true);
                 model.setBtnConnectText("Disconnect");
                 model.setBtnRecordEnabled(true);

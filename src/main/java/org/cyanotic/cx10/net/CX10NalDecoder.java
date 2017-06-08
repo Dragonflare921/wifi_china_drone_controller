@@ -49,6 +49,7 @@ public class CX10NalDecoder {
             inputStream.read(response);
             initialized = true;
         }
+        
         byte[] nalHeader = readData(10);
         sequence = nalHeader[5] & 0xFF;
         int nalType = nalHeader[3] & 0xFF;
