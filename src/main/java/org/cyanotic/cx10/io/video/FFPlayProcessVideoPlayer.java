@@ -22,7 +22,7 @@ public class FFPlayProcessVideoPlayer implements IVideoPlayer {
         try {
             String output = "tcp://" + HOSTNAME + ":" + PORT + "?listen";
             if (SO == "win")
-                ffplay = new ProcessBuilder("cmd", "/c", "start", "ffplay", "-probesize", "64", "-sync", "ext", output)
+                ffplay = new ProcessBuilder("cmd", "/c", "start", "ffplay", "-fflags", "nobuffer", "-fast", "-sync", "ext", "-an", "-sn", output)
                     .start();
             else
                 ffplay = new ProcessBuilder("ffplay", "-fflags", "nobuffer", output)

@@ -89,13 +89,13 @@ public class CX10 {
         previewPlayer = new FFPlayProcessVideoPlayer(SO);
         previewPlayer.start();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         final InetAddress ffplay = InetAddress.getByName("localhost");
         ffplaySocket = new Socket(ffplay, 8889);
-        ffplayOutput = new BufferedOutputStream(ffplaySocket.getOutputStream());
+        ffplayOutput = ffplaySocket.getOutputStream();
         startVideo();
     }
 
